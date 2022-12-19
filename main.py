@@ -26,7 +26,7 @@ def count_pencils(img):
     labeled = label(img)
     props = regionprops(labeled)
     for p in props:
-        # игнорируем неровный лист >:O
+        # игнорируем неровный лист >:/
         if ((p.bbox[0] == 0 and p.bbox[1] == 0) or
             (p.bbox[0] == 0 and p.bbox[3] == img.shape[1]) or
             (p.bbox[2] == img.shape[0] and p.bbox[3] == img.shape[1]) or
